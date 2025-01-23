@@ -255,6 +255,7 @@ img {
   .mainvisual__box {
     top: 37%;
     left: 6vw;
+    bottom: unset;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -376,11 +377,23 @@ img {
   color: #fff;
   font-weight: 600;
   font-size: 4.6153846154vw;
-  background: #46C4DB;
+  background-color: #46C4DB;
   line-height: 1.4444444444;
+  border: 2px solid transparent;
+  transition: 0.25s;
+}
+.button:focus, .button:hover {
+  background-color: #fff;
+  border-color: currentColor;
+  opacity: 1;
+  color: #46C4DB;
 }
 .button--attention {
-  background: #5DD5AB;
+  background-color: #5DD5AB;
+  width: 100%;
+}
+.button--attention:focus, .button--attention:hover {
+  color: #5DD5AB;
 }
 @media screen and (min-width: 768px) {
   .button {
@@ -541,28 +554,29 @@ img {
 }
 @media screen and (min-width: 768px) {
   .cta__button {
-    margin: 0 2.6666666667vw 0 0;
+    margin-right: 2.6666666667vw;
+    margin-bottom: 0;
     width: 25vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .cta__button {
-    margin: 0 2rem 0 0;
+    margin-right: 2rem;
     width: 18.75rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .cta__button:last-child {
+    margin-right: 0;
+  }
+}
 .cta__button-wrapper {
-  margin: 5.1282051282vw auto -3.8461538462vw;
+  margin: 5.1282051282vw auto;
 }
 @media screen and (min-width: 768px) {
   .cta__button-wrapper {
     display: flex;
-    margin: 0 -2.6666666667vw 0 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .cta__button-wrapper {
-    margin: 0 -2rem 0 0;
+    margin: 0;
   }
 }
 
@@ -660,7 +674,7 @@ img {
   }
 }
 .slider__button::after {
-  background-image: url(/assets/image/icon_arrow.png);
+  background-image: url(/assets/image/icon_arrow.svg);
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -725,6 +739,21 @@ img {
   .slider__pagination {
     margin-top: 1.4375rem;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-pagination-bullet {
+    width: mwt(9);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .swiper-pagination-bullet {
+    width: 0.5625rem;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #00AFBF;
 }
 
 @media screen and (min-width: 768px) {

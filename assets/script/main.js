@@ -18,7 +18,7 @@ $(function () {
   smooth();
 
   //-----------------------------------------------------	}
-  // スクロール位置の更新	smooth();
+  // スクロール位置の更新
   //-----------------------------------------------------
   function updateScrollPosition() {
     const documentHeight = $(document).height();
@@ -75,6 +75,7 @@ $(function () {
       768: {
         slidesPerView: 3,
         spaceBetween: 39,
+        slidesPerGroup: 3,
       }
     },
   });

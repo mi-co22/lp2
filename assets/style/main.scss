@@ -64,32 +64,6 @@
 
 
     }
-
-    // &__section {
-    //   @include mq {
-    //     padding: vwt(72) 0;
-    //   }
-
-    //   @include mq(lg) {
-    //     padding: px2Rem(72) 0;
-    //   }
-
-    //   &--fix {
-    //     margin-top: vw(-50);
-    //     margin-bottom: vw(-31);
-
-    //     @include mq {
-    //       margin-top: 0;
-    //       margin-bottom: 0;
-
-    //       padding-top: vwt(43);
-    //     }
-
-    //     @include mq(lg) {
-    //       padding-top: px2Rem(43);
-    //     }
-    //   }
-    // }
 }
 
 .container {
@@ -251,6 +225,7 @@
         @include mq {
             top: 37%;
             left: vwt(72);
+            bottom: unset;
 
         }
 
@@ -372,11 +347,28 @@
     color: $color-contrast;
     font-weight: 600;
     font-size: vw(18);
-    background: $color-success;
+    background-color: $color-success;
     @include lineheight(18, 26);
+    border: 2px solid transparent;
+    transition: .25s;
+
+    &:focus,
+    &:hover {
+        background-color: $color-contrast;
+        border-color: currentColor;
+        opacity: 1;
+        color: $color-success;
+    }
 
     &--attention {
-        background: $color-attention;
+        background-color: $color-attention;
+        width: 100%;
+
+        &:focus,
+        &:hover {
+            // background-color: $color-contrast;
+            color: $color-attention;
+        }
     }
 
     @include mq {
@@ -538,31 +530,34 @@
         margin-bottom: vw(15);
 
         @include mq {
-            margin: 0 vwt(32) 0 0;
+            margin-right: vwt(32);
+            margin-bottom: 0;
             width: vwt(300);
         }
 
         @include mq(lg) {
-            margin: 0 px2Rem(32) 0 0;
+            margin-right: px2Rem(32);
+
             width: px2Rem(300);
 
         }
 
+        &:last-child {
+            @include mq {
+                margin-right: 0;
+
+            }
+        }
     }
 
     &__button-wrapper {
-        margin: vw(20) auto vw(-15);
+        margin: vw(20) auto;
 
         @include mq {
 
             display: flex;
-            margin: 0 vwt(-32) 0 0;
+            margin: 0;
         }
-
-        @include mq {
-            margin: 0 px2Rem(-32) 0 0;
-        }
-
     }
 }
 
@@ -662,7 +657,7 @@
         }
 
         &::after {
-            background-image: url(/assets/image/icon_arrow.png);
+            background-image: url(/assets/image/icon_arrow.svg);
             background-repeat: no-repeat;
             background-size: contain;
             content: "";
@@ -728,6 +723,23 @@
 
         }
     }
+}
+
+.swiper-pagination-bullet {
+    // background: #EEE;
+
+    @include mq {
+        width: mwt(9);
+    }
+
+    @include mq(lg) {
+        width: px2Rem(9);
+    }
+
+}
+
+.swiper-pagination-bullet-active {
+    background: #00AFBF;
 }
 
 .faq {
