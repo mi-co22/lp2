@@ -57,14 +57,7 @@
 //-----------------------------------------------------
 // レイアウト
 //-----------------------------------------------------
-.main {
 
-    &__container {
-        // padding: vw(64) 0;
-
-
-    }
-}
 
 .container {
     padding: vw(50) vw(16);
@@ -366,7 +359,7 @@
 
         &:focus,
         &:hover {
-            // background-color: $color-contrast;
+            background-color: $color-contrast;
             color: $color-attention;
         }
     }
@@ -950,6 +943,12 @@
         width: vw(40);
         height: vw(40);
         transition: background-color 0.3s;
+        background: url(/assets/image/icon_to_top.svg);
+
+        &:focus,
+        &:hover {
+            background: url(/assets/image/icon_to_top_hover.svg);
+        }
 
         @include mq {
             width: vwt(40);

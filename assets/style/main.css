@@ -393,6 +393,7 @@ img {
   width: 100%;
 }
 .button--attention:focus, .button--attention:hover {
+  background-color: #fff;
   color: #5DD5AB;
 }
 @media screen and (min-width: 768px) {
@@ -958,6 +959,10 @@ img {
   width: 10.2564102564vw;
   height: 10.2564102564vw;
   transition: background-color 0.3s;
+  background: url(/assets/image/icon_to_top.svg);
+}
+.pagetop a:focus, .pagetop a:hover {
+  background: url(/assets/image/icon_to_top_hover.svg);
 }
 @media screen and (min-width: 768px) {
   .pagetop a {
