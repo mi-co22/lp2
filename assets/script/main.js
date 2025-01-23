@@ -5,7 +5,8 @@ $(function () {
   //-----------------------------------------------------
   function smooth() {
     const $btn = $('.js-smooth-scroll');
-    $('a[href^="#"]').on('click', function () {
+    $('a[href^="#"]').on('click', function (event) {
+      event.preventDefault();
       const speed = 500;
       const href = $(this).attr('href');
       const target = $(href === '#' || href === '' ? 'html' : href);
@@ -16,53 +17,40 @@ $(function () {
   }
   smooth();
 
-  // $(window).on("scroll", function () {
-  //   documentHeight = $(document).height();
-  //   scrollPosition = $(this).height() + $(this).scrollTop();
-  //   footerHeight = $(".js-footer").innerHeight();
-
-  //   if (documentHeight - scrollPosition <= footerHeight) {
-  //     $(".js-smooth-scroll").css({
-  //       position: "absolute",
-  //       bottom: footerHeight,
-  //     });
-  //   } else {
-  //     $(".js-smooth-scroll").css({
-  //       position: "fixed",
-  //       bottom: 10
-  //     });
-  //   }
-  // });
-
+  //-----------------------------------------------------	}
+  // スクロール位置の更新	smooth();
+  //-----------------------------------------------------
   function updateScrollPosition() {
     const documentHeight = $(document).height();
-    const scrollPosition = $(window).height() + $(window).scrollTop(); // $(this) を $(window) に変更
+    const scrollPosition = $(window).height() + $(window).scrollTop();
     const footerHeight = $(".js-footer").innerHeight();
-
+    const containerWidth = 1200;
+    const windowWidth = $(window).width();
+    const rightOffset = Math.max(0, (windowWidth - containerWidth) / 2);
+    const $scrollButton = $('.js-smooth-scroll');
     if (documentHeight - scrollPosition <= footerHeight) {
-      $(".js-smooth-scroll").css({
+      $scrollButton.css({
         position: "absolute",
         bottom: footerHeight,
+        right: 0
       });
     } else {
-      $(".js-smooth-scroll").css({
+      $scrollButton.css({
         position: "fixed",
         bottom: 10,
+        right: rightOffset
       });
     }
   }
-
-
+  //-----------------------------------------------------
+  // スクロールボタンの表示制御
+  //-----------------------------------------------------
   function scrollDisplay() {
-    const target = $(".js-smooth-scroll");
+    const $scrollButton = $('.js-smooth-scroll');
     if ($(window).scrollTop() > 100) {
-      target.css({
-        display: "block",
-      });
+      $scrollButton.fadeIn();
     } else {
-      target.css({
-        display: "none",
-      });
+      $scrollButton.fadeOut();
     }
   }
 
@@ -70,7 +58,9 @@ $(function () {
     scrollDisplay();
     updateScrollPosition();
   });
-
+  //-----------------------------------------------------
+  // スライダー
+  //-----------------------------------------------------
   const mySwiper = new Swiper('.swiper', {
     loop: true,
     pagination: {
@@ -88,9 +78,9 @@ $(function () {
       }
     },
   });
+  //-----------------------------------------------------
   // アコーディオン
-  //--------------------------------------------
-  //ariaを利用した汎用的に使えるアコーディオン用スクリプトにしてあります。
+  //-----------------------------------------------------
   function accordion() {
     $('[aria-controls^="accordion"]').stop().on('click', function (e) {
       const $self = $(e.currentTarget);
