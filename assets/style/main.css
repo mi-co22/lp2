@@ -154,7 +154,7 @@ img {
   .footer__container {
     width: 100vw;
     margin: 0 auto;
-    padding: 2.6666666667vw;
+    padding: 3.25vw 2.6666666667vw;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -164,7 +164,7 @@ img {
   .footer__container {
     width: 75rem;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2.4375rem 2rem;
   }
 }
 .footer__logo {
@@ -253,7 +253,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .mainvisual__box {
-    top: 37%;
+    top: 37.5%;
     left: 6vw;
     bottom: unset;
   }
@@ -290,14 +290,14 @@ img {
 }
 @media screen and (min-width: 768px) {
   .mainvisual__text {
-    margin-top: 1.0833333333vw;
+    margin-top: 0.8333333333vw;
     font-size: 2.0833333333vw;
     line-height: 1.24;
   }
 }
 @media screen and (min-width: 1200px) {
   .mainvisual__text {
-    margin-top: 0.8125rem;
+    margin-top: 0.625rem;
     font-size: 1.5625rem;
   }
 }
@@ -310,13 +310,13 @@ img {
 }
 @media screen and (min-width: 768px) {
   .title {
-    margin-top: 7.0833333333vw;
+    margin-top: 6.6666666667vw;
     margin-bottom: 2.75vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .title {
-    margin-top: 5.3125rem;
+    margin-top: 5rem;
     margin-bottom: 2.0625rem;
   }
 }
@@ -332,6 +332,7 @@ img {
 @media screen and (min-width: 768px) {
   .title__main {
     font-size: 3.75vw;
+    line-height: 1.18;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -348,23 +349,23 @@ img {
 @media screen and (min-width: 768px) {
   .title__sub {
     font-size: 1.6666666667vw;
-    margin-top: 0.6666666667vw;
+    margin-top: 0.3333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .title__sub {
     font-size: 1.25rem;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
 }
 @media screen and (min-width: 768px) {
   .title--faq {
-    margin-top: 0.5vw;
+    margin-top: 0.3333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .title--faq {
-    margin-top: 0.375rem;
+    margin-top: 0.25rem;
   }
 }
 
@@ -448,15 +449,14 @@ img {
 @media screen and (min-width: 768px) {
   .media__title {
     font-size: 3.1666666667vw;
-    margin-bottom: 0.3333333333vw;
-    line-height: 1.3;
+    margin-bottom: 0;
+    line-height: 1.4210526316;
     text-align: left;
   }
 }
 @media screen and (min-width: 1200px) {
   .media__title {
     font-size: 2.375rem;
-    margin-bottom: 0.25rem;
   }
 }
 .media__title--sub {
@@ -469,14 +469,16 @@ img {
 @media screen and (min-width: 768px) {
   .media__title--sub {
     font-size: 2vw;
-    margin-bottom: 1.25vw;
+    margin-bottom: 1.5833333333vw;
+    margin-top: 0.5vw;
     text-align: left;
   }
 }
 @media screen and (min-width: 1200px) {
   .media__title--sub {
     font-size: 1.5rem;
-    margin-bottom: 0.9375rem;
+    margin-bottom: 1.1875rem;
+    margin-top: 0.375rem;
   }
 }
 .media__text {
@@ -631,13 +633,13 @@ img {
 @media screen and (min-width: 768px) {
   .slider__image {
     width: 8.3333333333vw;
-    margin: 1.5833333333vw auto 0;
+    margin: 1.5833333333vw auto 0.4166666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .slider__image {
     width: 6.25rem;
-    margin: 1.1875rem auto 0;
+    margin: 1.1875rem auto 0.3125rem;
   }
 }
 .slider__name {
@@ -649,13 +651,13 @@ img {
 }
 @media screen and (min-width: 768px) {
   .slider__box {
-    margin-top: 1.0833333333vw;
+    margin-top: 0.8333333333vw;
     line-height: 1.75;
   }
 }
 @media screen and (min-width: 1200px) {
   .slider__box {
-    margin-top: 0.8125rem;
+    margin-top: 0.625rem;
   }
 }
 .slider__button {
@@ -744,7 +746,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .swiper-pagination-bullet {
-    width: mwt(9);
+    width: 0.75vw;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -755,6 +757,10 @@ img {
 
 .swiper-pagination-bullet-active {
   background: #00AFBF;
+}
+
+.slider__pagination {
+  gap: 1.2rem 1px;
 }
 
 @media screen and (min-width: 768px) {
@@ -809,12 +815,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .faq dt:not(:first-child) {
-    margin-top: 1.75vw;
+    margin-top: 1.9166666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq dt:not(:first-child) {
-    margin-top: 1.3125rem;
+    margin-top: 1.4375rem;
   }
 }
 .faq__q-icon {
@@ -841,27 +847,32 @@ img {
 @media screen and (min-width: 768px) {
   .faq__q-text {
     font-size: 1.25vw;
+    margin-left: 1.6666666667vw;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .faq__q-text {
+    line-height: 1.6;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__q-text {
     font-size: 0.9375rem;
+    margin-left: 1.25rem;
   }
 }
 .faq__answer {
   display: flex;
   padding: 0 4.358974359vw 7.6923076923vw;
-  align-items: flex-start;
 }
 @media screen and (min-width: 768px) {
   .faq__answer {
-    padding: 0 2vw 2vw 2vw;
-    align-items: center;
+    padding: 0 2vw 1.6666666667vw 2vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__answer {
-    padding: 0 1.5rem 1.5rem 1.5rem;
+    padding: 0 1.5rem 1.25rem 1.5rem;
   }
 }
 .faq__a-icon {
@@ -874,28 +885,34 @@ img {
 @media screen and (min-width: 768px) {
   .faq__a-icon {
     font-size: 1.5vw;
+    margin-top: 0.4166666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__a-icon {
     font-size: 1.125rem;
+    margin-top: 0.3125rem;
   }
 }
 .faq__a-text {
   margin-left: 3.5897435897vw;
   font-size: 3.8461538462vw;
-  line-height: 1.75;
 }
 @media screen and (min-width: 768px) {
   .faq__a-text {
     font-size: 1.25vw;
-    margin-left: 1.3333333333vw;
+    margin-left: 1.6666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__a-text {
     font-size: 0.9375rem;
-    margin-left: 1rem;
+    margin-left: 1.25rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .faq__a-text p {
+    line-height: 1.85;
   }
 }
 .faq__panel {
@@ -975,4 +992,4 @@ img {
     width: 2.5rem;
     height: 2.5rem;
   }
-}
+}/*# sourceMappingURL=main.css.map */
