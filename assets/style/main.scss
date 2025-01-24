@@ -35,9 +35,6 @@
 
             }
         }
-
-
-
     }
 
     &__logo {
@@ -112,6 +109,7 @@
     &__container {
         padding: vw(24) vw(45);
         position: relative;
+
         @include mq {
             width: vwt(1200);
             margin: 0 auto;
@@ -419,20 +417,19 @@
         @include mq {
             font-size: vwt(38);
             margin-bottom: 0;
-           @include lineheight(38,54);
+            @include lineheight(38, 54);
             text-align: left;
         }
 
         @include mq(lg) {
             font-size: px2Rem(38);
-            // margin-bottom: px2Rem(4);
         }
 
         &--sub {
             font-size: vw(24);
             font-family: "Noto Serif JP", serif;
             font-weight: 600;
-            
+
             margin-bottom: vw(15);
             text-align: center;
 
@@ -468,12 +465,14 @@
 }
 
 .cta {
-    &--fix{
+    &--fix {
         margin-top: vw(10);
-        @include mq{
+
+        @include mq {
             margin-top: 0;
         }
     }
+
     &__container {
         background: $color-pale;
         padding: vw(18) vw(29) vw(32);
@@ -528,6 +527,18 @@
                 margin-top: px2Rem(12);
 
             }
+        }
+    }
+
+    &__space {
+        margin-left: vw(5);
+
+        @include mq {
+            margin-left: vwt(7);
+        }
+
+        @include mq(lg) {
+            margin-left: px2Rem(7);
         }
     }
 
@@ -746,10 +757,12 @@
 .swiper-pagination-bullet-active {
     background: #00AFBF;
 }
-.slider__pagination{
+
+.slider__pagination {
     gap: 1.2rem 1px;
 
 }
+
 .faq {
     &__wrapper {
         @include mq {
@@ -818,10 +831,11 @@
         line-height: 1;
         vertical-align: middle;
         font-size: vw(16);
-margin-top: vw(5);
+        margin-top: vw(5);
+
         @include mq {
             font-size: vwt(18);
-margin-top: 0;
+            margin-top: 0;
         }
 
         @include mq(lg) {
@@ -834,11 +848,12 @@ margin-top: 0;
         font-size: vw(15);
         flex-grow: 1;
         margin-left: vw(15);
-        @include lineheight(15,28);
+        @include lineheight(15, 28);
+
         @include mq {
             font-size: vwt(15);
             margin-left: vwt(20);
-               line-height: 1.6;
+            line-height: 1.6;
         }
 
         @include mq(lg) {
@@ -851,11 +866,9 @@ margin-top: 0;
     &__answer {
         display: flex;
         padding: 0 vw(17) vw(30);
-        // align-items: flex-start;
 
         @include mq {
             padding: 0 vwt(24) vwt(20) vwt(24);
-            // align-items: center;
         }
 
         @include mq(lg) {
@@ -903,12 +916,13 @@ margin-top: 0;
 
 
         }
-        p{
-        @include lineheight(15,28);
 
-                @include mq{
-                    line-height: 1.85;
-                }
+        p {
+            @include lineheight(15, 28);
+
+            @include mq {
+                line-height: 1.85;
+            }
         }
     }
 
@@ -942,7 +956,7 @@ margin-top: 0;
             display: block;
             width: vw(10);
             height: vw(10);
-            transition: all 0.3s;
+            transition: all .3s;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) rotate(0deg);
@@ -962,8 +976,6 @@ margin-top: 0;
 }
 
 .pagetop {
-
-    // bottom: vw(40);
     z-index: 10;
     display: none;
     transition: opacity 300ms;
@@ -972,12 +984,12 @@ margin-top: 0;
         display: block;
         width: vw(40);
         height: vw(40);
-        transition: background-color 0.3s;
+        transition: .3s;
         background: url(/assets/image/icon_to_top.svg) center center / contain no-repeat;
 
         &:hover {
             background: url(/assets/image/icon_to_top_hover.svg) center center / contain no-repeat;
-opacity: 1;
+            opacity: 1;
         }
 
         @include mq {
@@ -990,13 +1002,15 @@ opacity: 1;
             height: px2Rem(40);
         }
     }
-    &__container{
+
+    &__container {
         position: relative;
 
         display: flex;
-        margin:0 vw(16);
+        margin: 0 vw(16);
         justify-content: flex-end;
-        @include mq{
+
+        @include mq {
             max-width: 1200px;
             margin: 0 auto;
         }

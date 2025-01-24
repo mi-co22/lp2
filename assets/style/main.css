@@ -28,7 +28,6 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  vertical-align: top;
 }
 
 .sp-block {
@@ -561,6 +560,19 @@ img {
     margin-top: 0.75rem;
   }
 }
+.cta__space {
+  margin-left: 1.2820512821vw;
+}
+@media screen and (min-width: 768px) {
+  .cta__space {
+    margin-left: 0.5833333333vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cta__space {
+    margin-left: 0.4375rem;
+  }
+}
 .cta__button {
   margin-bottom: 5.3846153846vw;
 }
@@ -988,7 +1000,7 @@ img {
   display: block;
   width: 10.2564102564vw;
   height: 10.2564102564vw;
-  transition: background-color 0.3s;
+  transition: 0.3s;
   background: url(/assets/image/icon_to_top.svg) center center/contain no-repeat;
 }
 .pagetop a:hover {
@@ -1018,4 +1030,4 @@ img {
     max-width: 1200px;
     margin: 0 auto;
   }
-}/*# sourceMappingURL=main.css.map */
+}
