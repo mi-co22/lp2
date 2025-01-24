@@ -17,31 +17,39 @@ $(function () {
   }
   smooth();
 
-  //-----------------------------------------------------	}
-  // スクロール位置の更新
-  //-----------------------------------------------------
-  function updateScrollPosition() {
-    const documentHeight = $(document).height();
-    const scrollPosition = $(window).height() + $(window).scrollTop();
-    const footerHeight = $(".js-footer").innerHeight();
-    const containerWidth = 1200;
-    const windowWidth = $(window).width();
-    const rightOffset = Math.max(0, (windowWidth - containerWidth) / 2);
-    const $scrollButton = $('.js-smooth-scroll');
-    if (documentHeight - scrollPosition <= footerHeight) {
-      $scrollButton.css({
-        position: "absolute",
-        bottom: footerHeight,
-        right: 0
-      });
-    } else {
-      $scrollButton.css({
-        position: "fixed",
-        bottom: 10,
-        right: rightOffset
-      });
-    }
+ //-----------------------------------------------------
+// スクロール位置の更新
+//-----------------------------------------------------
+function updateScrollPosition() {
+  const documentHeight = $(document).height();
+  const scrollPosition = $(window).height() + $(window).scrollTop();
+  const footerHeight = $(".js-footer").innerHeight();
+  const $scrollButton = $('.js-smooth-scroll');
+  const $container = $(".js-pagetop");
+  const containerOffsetRight = $(window).width() - ($container.offset().left + $container.outerWidth());
+
+  if (documentHeight - scrollPosition <= footerHeight) {
+    // フッターまで到達: positionをabsoluteに設定
+    $scrollButton.css({
+      position: "absolute",
+      bottom: 0,
+      right: 0
+    });
+  } else {
+    // 通常時: positionをfixedに設定
+    $scrollButton.css({
+      position: "fixed",
+      bottom: 10,
+      right: containerOffsetRight
+    });
   }
+}
+
+// スクロールとリサイズイベントにバインド
+$(window).on('scroll resize', updateScrollPosition);
+
+// 初期実行
+$(document).ready(updateScrollPosition);
   //-----------------------------------------------------
   // スクロールボタンの表示制御
   //-----------------------------------------------------
@@ -56,7 +64,6 @@ $(function () {
 
   $(window).on("scroll", function () {
     scrollDisplay();
-    updateScrollPosition();
   });
   //-----------------------------------------------------
   // スライダー

@@ -112,7 +112,6 @@
     &__container {
         padding: vw(24) vw(45);
         position: relative;
-
         @include mq {
             width: vwt(1200);
             margin: 0 auto;
@@ -133,7 +132,7 @@
 
     &__logo {
         width: vw(166);
-        margin: 0 auto vw(24);
+        margin: vw(7) auto vw(29);
 
         @include mq {
             width: vwt(190);
@@ -146,7 +145,8 @@
     }
 
     &__copyright {
-        font-size: vw(11);
+        font-size: vw(12);
+        letter-spacing: .055em;
 
         @include mq {
             font-size: vwt(12);
@@ -168,7 +168,7 @@
     font-size: vw(12);
     display: flex;
     justify-content: space-between;
-    margin-bottom: vw(25);
+    margin-bottom: vw(20);
 
     @include mq {
         width: vwt(344);
@@ -337,7 +337,7 @@
 .button {
     display: block;
     margin-inline: auto;
-    padding: vw(16);
+    padding: vw(14);
     border-radius: 2em;
     text-align: center;
     color: $color-contrast;
@@ -412,7 +412,7 @@
         font-size: vw(30);
         font-family: "EB Garamond", serif;
         font-weight: bold;
-        margin-bottom: vw(7);
+        margin-bottom: vw(15);
         line-height: 1.2;
         text-align: center;
 
@@ -433,7 +433,7 @@
             font-family: "Noto Serif JP", serif;
             font-weight: 600;
             
-            margin-bottom: vw(10);
+            margin-bottom: vw(15);
             text-align: center;
 
             @include mq {
@@ -468,6 +468,12 @@
 }
 
 .cta {
+    &--fix{
+        margin-top: vw(10);
+        @include mq{
+            margin-top: 0;
+        }
+    }
     &__container {
         background: $color-pale;
         padding: vw(18) vw(29) vw(32);
@@ -526,7 +532,7 @@
     }
 
     &__button {
-        margin-bottom: vw(15);
+        margin-bottom: vw(21);
 
         @include mq {
             margin-right: vwt(32);
@@ -542,6 +548,8 @@
         }
 
         &:last-child {
+            margin-bottom: 0;
+
             @include mq {
                 margin-right: 0;
 
@@ -550,7 +558,7 @@
     }
 
     &__button-wrapper {
-        margin: vw(20) auto;
+        margin: vw(16) auto 0;
 
         @include mq {
 
@@ -605,7 +613,7 @@
         width: vw(80);
         text-align: center;
         margin-inline: auto;
-        margin: vw(13) auto 0;
+        margin: vw(13) auto vw(6);
 
         @include mq {
             width: vwt(100);
@@ -624,7 +632,7 @@
     }
 
     &__box {
-        margin-top: vw(20);
+        margin-top: vw(13);
         @include lineheight(14, 28);
 
         @include mq {
@@ -709,7 +717,7 @@
         flex-wrap: wrap;
         gap: 1.2rem 0.8rem;
         justify-content: center;
-        margin-top: vw(16);
+        margin-top: vw(18);
         text-align: center;
 
         @include mq {
@@ -725,8 +733,6 @@
 }
 
 .swiper-pagination-bullet {
-    // background: #EEE;
-
     @include mq {
         width: vwt(9);
     }
@@ -770,7 +776,7 @@
         display: flex;
         color: $color-second;
         align-items: flex-start;
-        padding: vw(20) vw(16);
+        padding: vw(16) vw(16) vw(14);
         font-weight: bold;
         text-align: left;
         cursor: pointer;
@@ -812,10 +818,10 @@
         line-height: 1;
         vertical-align: middle;
         font-size: vw(16);
-
+margin-top: vw(5);
         @include mq {
             font-size: vwt(18);
-
+margin-top: 0;
         }
 
         @include mq(lg) {
@@ -828,13 +834,11 @@
         font-size: vw(15);
         flex-grow: 1;
         margin-left: vw(15);
-
+        @include lineheight(15,28);
         @include mq {
             font-size: vwt(15);
             margin-left: vwt(20);
-            @include mq{
                line-height: 1.6;
-            }
         }
 
         @include mq(lg) {
@@ -867,6 +871,7 @@
         font-weight: bold;
         line-height: 1;
         vertical-align: middle;
+        margin-top: vw(5);
 
         @include mq {
             font-size: vwt(18);
@@ -899,6 +904,8 @@
 
         }
         p{
+        @include lineheight(15,28);
+
                 @include mq{
                     line-height: 1.85;
                 }
@@ -955,8 +962,8 @@
 }
 
 .pagetop {
-    right: 0;
-    bottom: vw(40);
+
+    // bottom: vw(40);
     z-index: 10;
     display: none;
     transition: opacity 300ms;
@@ -966,11 +973,11 @@
         width: vw(40);
         height: vw(40);
         transition: background-color 0.3s;
-        background: url(/assets/image/icon_to_top.svg);
+        background: url(/assets/image/icon_to_top.svg) center center / contain no-repeat;
 
-        &:focus,
         &:hover {
-            background: url(/assets/image/icon_to_top_hover.svg);
+            background: url(/assets/image/icon_to_top_hover.svg) center center / contain no-repeat;
+opacity: 1;
         }
 
         @include mq {
@@ -981,6 +988,17 @@
         @include mq(lg) {
             width: px2Rem(40);
             height: px2Rem(40);
+        }
+    }
+    &__container{
+        position: relative;
+
+        display: flex;
+        margin:0 vw(16);
+        justify-content: flex-end;
+        @include mq{
+            max-width: 1200px;
+            margin: 0 auto;
         }
     }
 }
