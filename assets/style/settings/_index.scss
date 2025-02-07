@@ -14,7 +14,7 @@ $color-attention: #5DD5AB;
 $color-success: #46C4DB;
 $color-background: #DBF7F9;
 // フォントファミリー
-$font-family: "Noto Serif JP", 'Marcellus', 'EB Garamond', arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', meiryo, serif;
+$font-family: "Noto Serif JP", serif;
 // コンテンツ幅の指定
 $sp-full-width: 390; // スマホ用のカンプ幅
 $pc-full-width: 1500; // PC用のカンプ幅
@@ -92,12 +92,25 @@ $breakpoints: (
 //-----------------------------------------------------
 // base
 //-----------------------------------------------------
+html {
+    scroll-behavior: smooth;
+    // scroll-padding-top: vw(80);
+
+    // @include mq {
+    //     scroll-padding-top: vwt(100);
+    // }
+
+    // @include mq(lg) {
+    //     scroll-padding-top: px2Rem(100);
+    // }
+}
+
 body {
     color: $color-normal;
     font-family: $font-family;
     line-height: 1.75;
     font-size: vw(14);
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
     @include mq {
         font-size: vwt(16);
@@ -112,7 +125,7 @@ a {
     text-decoration: none;
     transition: color 0.3s;
 
-    &:focus,
+    // &:focus,
     &:hover {
         opacity: 0.6;
     }
@@ -137,7 +150,8 @@ img {
     white-space: nowrap;
     width: 1px;
     height: 1px;
-    overflow: hidden;
+    // overflow: hidden;
+    contain: paint;
     border: 0;
     padding: 0;
     clip: rect(0 0 0 0);

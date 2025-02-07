@@ -23,18 +23,24 @@
     }
 
     &__container {
-        &.container {
-            display: flex;
-            align-items: center;
-            height: 100%;
-            margin: 0;
-            padding: 0;
 
-            @include mq {
-                margin: 0 auto;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: 0;
+        padding: 0;
 
-            }
+        @include mq {
+            max-width: vwt($pc-content-width);
+            padding: 0 vwt(22);
+            margin: 0 auto;
         }
+
+        @include mq(lg) {
+            max-width: px2Rem($pc-content-width);
+            padding: 0 px2Rem(22);
+        }
+
     }
 
     &__logo {
@@ -52,53 +58,53 @@
 }
 
 //-----------------------------------------------------
-// レイアウト
+// フッター
 //-----------------------------------------------------
 
 
-.container {
-    padding: vw(50) vw(16);
-    margin-inline: auto;
+// .container {
+//     padding: vw(50) vw(16);
+//     margin-inline: auto;
 
-    @include mq {
-        max-width: vwt($pc-content-width);
-        padding: 0 vwt(22);
-        margin: vwt(48) auto;
-    }
+//     @include mq {
+//         max-width: vwt($pc-content-width);
+//         padding: 0 vwt(22);
+//         margin: vwt(48) auto;
+//     }
 
-    @include mq(lg) {
-        max-width: px2Rem($pc-content-width);
-        padding: 0 px2Rem(22);
-        margin: px2Rem(48) auto;
-    }
+//     @include mq(lg) {
+//         max-width: px2Rem($pc-content-width);
+//         padding: 0 px2Rem(22);
+//         margin: px2Rem(48) auto;
+//     }
 
-    &--faq {
+//     &--faq {
 
-        padding: vw(33) vw(16);
+//         padding: vw(33) vw(16);
 
-        @include mq {
-            margin: 0 auto;
-            padding: 0;
+//         @include mq {
+//             margin: 0 auto;
+//             padding: 0;
 
-        }
-    }
-}
+//         }
+//     }
+// }
 
-.section {
-    &--faq {
-        background-image: linear-gradient(90deg,
-                rgba(244, 255, 232, 1),
-                rgba(198, 240, 254, 1));
+// .section {
+//     &--faq {
+//         background-image: linear-gradient(90deg,
+//                 rgba(244, 255, 232, 1),
+//                 rgba(198, 240, 254, 1));
 
-        @include mq {
-            padding: vwt(40) 0;
-        }
+//         @include mq {
+//             padding: vwt(40) 0;
+//         }
 
-        @include mq(lg) {
-            padding: px2Rem(40) 0;
-        }
-    }
-}
+//         @include mq(lg) {
+//             padding: px2Rem(40) 0;
+//         }
+//     }
+// }
 
 .footer {
     position: relative;
@@ -204,10 +210,20 @@
     &__container {
         position: relative;
         height: 100%;
+        padding: vw(50) vw(16);
+        margin-inline: auto;
 
         @include mq {
-            margin-top: 0;
+            max-width: vwt($pc-content-width);
+            padding: 0 vwt(22);
+            margin: 0 auto;
         }
+
+        @include mq(lg) {
+            max-width: px2Rem($pc-content-width);
+            padding: 0 px2Rem(22);
+        }
+
     }
 
     &__box {
@@ -250,6 +266,7 @@
         @include lineheight(20, 29);
         @include l_spacing(300);
         margin-top: vw(7);
+        display: block;
 
         @include mq {
             margin-top: vwt(10);
@@ -321,7 +338,7 @@
         }
     }
 
-    &--faq {
+    &--qanda {
         @include mq {
             margin-top: vwt(4);
         }
@@ -377,6 +394,68 @@
     }
 }
 
+.pagetop {
+    &__container {
+        // position: relative;
+        display: flex;
+        // margin: 0 vw(16);
+        justify-content: flex-end;
+        // padding-right: vw(16);
+        position: sticky;
+        // bottom: 10px;
+        // left: auto;
+
+        @include mq {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+
+    }
+
+    &__button {
+        // position: sticky;
+        bottom: 10px;
+        left: 0;
+        // left: auto;
+        // top: auto;
+        z-index: 10;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        // transition: opacity 0.3s, visibility 0.3s;
+        width: vw(40);
+        height: vw(40);
+        transition: .3s;
+        background: url(/assets/image/icon_to_top.svg) center center / contain no-repeat;
+
+        &:hover {
+            background: url(/assets/image/icon_to_top_hover.svg) center center / contain no-repeat;
+            opacity: 1;
+        }
+
+        @include mq {
+            width: vwt(40);
+            height: vwt(40);
+        }
+
+        @include mq(lg) {
+            width: px2Rem(40);
+            height: px2Rem(40);
+        }
+
+        &--visible {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+
+}
+
+//-----------------------------------------------------
+// レイアウト
+//-----------------------------------------------------
 .media {
     background: url(/assets/image/media_bg_sp.jpg) center center / cover no-repeat;
     width: 100%;
@@ -387,8 +466,24 @@
 
     }
 
-
     &__container {
+        padding: vw(50) vw(16);
+        margin-inline: auto;
+
+        @include mq {
+            max-width: vwt($pc-content-width);
+            padding: 0 vwt(22);
+            margin: vwt(48) auto;
+        }
+
+        @include mq(lg) {
+            max-width: px2Rem($pc-content-width);
+            padding: 0 px2Rem(22);
+            margin: px2Rem(48) auto;
+        }
+    }
+
+    &__box {
         padding: 0 0 vw(262);
 
         @include mq {
@@ -429,6 +524,7 @@
             font-size: vw(24);
             font-family: "Noto Serif JP", serif;
             font-weight: 600;
+            display: block;
 
             margin-bottom: vw(15);
             text-align: center;
@@ -464,6 +560,25 @@
     }
 }
 
+.voices {
+    &__container {
+        padding: vw(50) vw(16);
+        margin-inline: auto;
+
+        @include mq {
+            max-width: vwt($pc-content-width);
+            padding: 0 vwt(22);
+            margin: vwt(48) auto;
+        }
+
+        @include mq(lg) {
+            max-width: px2Rem($pc-content-width);
+            padding: 0 px2Rem(22);
+            margin: px2Rem(48) auto;
+        }
+    }
+}
+
 .cta {
     &--fix {
         margin-top: vw(10);
@@ -476,21 +591,21 @@
     &__container {
         background: $color-pale;
         padding: vw(18) vw(29) vw(32);
+        margin-inline: auto;
 
         @include mq {
             display: flex;
             justify-content: space-between;
-            padding: vwt(55) vwt(20);
+            // padding: vwt(55) vwt(20);
             max-width: vwt(1000);
-            margin-inline: auto;
             padding: vwt(43) vwt(48);
+            margin: vwt(48) auto;
         }
 
         @include mq(lg) {
             max-width: px2Rem(1000);
             padding: px2Rem(43) px2Rem(48);
-
-
+            margin: px2Rem(48) auto;
         }
     }
 
@@ -763,6 +878,35 @@
 
 }
 
+.qanda {
+    background-image: linear-gradient(90deg,
+            rgba(244, 255, 232, 1),
+            rgba(198, 240, 254, 1));
+
+    @include mq {
+        padding: vwt(40) 0;
+    }
+
+    @include mq(lg) {
+        padding: px2Rem(40) 0;
+    }
+
+    &__container {
+        padding: vw(33) vw(16);
+        margin-inline: auto;
+
+        @include mq {
+            max-width: vwt($pc-content-width);
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        @include mq(lg) {
+            max-width: px2Rem($pc-content-width);
+        }
+    }
+}
+
 .faq {
     &__wrapper {
         @include mq {
@@ -973,46 +1117,4 @@
         }
     }
 
-}
-
-.pagetop {
-    z-index: 10;
-    display: none;
-    transition: opacity 300ms;
-
-    a {
-        display: block;
-        width: vw(40);
-        height: vw(40);
-        transition: .3s;
-        background: url(/assets/image/icon_to_top.svg) center center / contain no-repeat;
-
-        &:hover {
-            background: url(/assets/image/icon_to_top_hover.svg) center center / contain no-repeat;
-            opacity: 1;
-        }
-
-        @include mq {
-            width: vwt(40);
-            height: vwt(40);
-        }
-
-        @include mq(lg) {
-            width: px2Rem(40);
-            height: px2Rem(40);
-        }
-    }
-
-    &__container {
-        position: relative;
-
-        display: flex;
-        margin: 0 vw(16);
-        justify-content: flex-end;
-
-        @include mq {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-    }
 }

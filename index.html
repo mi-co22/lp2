@@ -15,68 +15,75 @@
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Marcellus&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.2/destyle.css">
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
         <link rel="stylesheet" href="/assets/style/main.css">
     </head>
 
     <body>
         <header class="header">
-            <div class="container header__container">
-                <h1 class="header__logo">
+            <div class="header__container">
+                <div class="header__logo">
                     <a href="/">
-                        <img src="/assets/image/logo.svg" alt="Kira-meki" width="143" height="30" class="header__logo-image">
+                        <img src="/assets/image/logo.svg" alt="Kira-meki" width="143" height="30"
+                            class="header__logo-image">
                     </a>
-                </h1>
+                </div>
             </div>
         </header>
+        <!-- mainvisual -->
         <div class="mainvisual">
-            <div class="container  mainvisual__container">
+            <div class="mainvisual__container">
                 <div class="mainvisual__box">
-                    <h2 class="mainvisual__title">Kirameki<br>Cream</h2>
-                    <p class="mainvisual__text">肌のうるおい、煌めく。</p>
+                    <h1 class="mainvisual__title">Kirameki<br>Cream<span class="mainvisual__text">肌のうるおい、煌めく。</span></h1>
                 </div>
             </div>
         </div>
+        <!-- /.mainvisual -->
         <main>
+            <!-- cta -->
             <div class="cta">
-                <div class="container">
-                    <div class="cta__container">
-                        <div class="cta__text-wrapper">
-                            <p class="cta__text">
-                                キラメキクリーム
-                            </p>
-                            <p class="cta__text cta__text--small">税込<span class="cta__space"></span>4,000円</p>
-                        </div>
-                        <div class="cta__button-wrapper">
-                            <a href="#" class="cta__button button">オンラインショップへ</a>
-                            <form action="/cart/" method="post">
-                                <button type="submit" class="cta__button button button--attention">購入する</button>
-                            </form>
-                        </div>
+                <!-- <div class="container"> -->
+                <div class="cta__container">
+                    <div class="cta__text-wrapper">
+                        <p class="cta__text">
+                            キラメキクリーム
+                        </p>
+                        <p class="cta__text cta__text--small">税込<span class="cta__space"></span>4,000円</p>
+                    </div>
+                    <div class="cta__button-wrapper">
+                        <a href="#" class="cta__button button">オンラインショップへ</a>
+                        <form action="/cart/" method="post">
+                            <button type="submit" class="cta__button button button--attention">購入する</button>
+                        </form>
                     </div>
                 </div>
+                <!-- </div> -->
             </div>
-            <section class="section section--media media">
-                <div class="container">
-                    <div class="media__container">
-                        <h3 class="media__title">Keep Your Skin Beautiful.</h3>
-                        <p class="media__title media__title--sub">お肌を美しく保つ</p>
-                        <p class="media__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+            <!-- /.cta -->
+            <!-- section media-->
+            <section class="media">
+                <div class="media__container">
+                    <div class="media__box">
+                        <h2 class="media__title">Keep Your Skin Beautiful.
+                            <span class="media__title media__title--sub">お肌を美しく保つ</span>
+                        </h2>
+
+                        <p class="media__text">
+                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                        </p>
                     </div>
                 </div>
             </section>
-            <section class="section section--voices">
-                <div class="container">
-                    <h4 class="title">
+            <!-- /section .media-->
+            <!-- section voices-->
+            <section class="voices">
+                <div class="voices__container">
+                    <h2 class="title">
                         <span class="title__main">Voices</span>
                         <span class="title__sub">お客様の声</span>
-                    </h4>
+                    </h2>
                     <div class="slider__wrapper">
                         <div class="slider">
                             <div class="swiper">
@@ -85,42 +92,54 @@
                                         <img src="/assets/image/swiper_01.png" alt="" class="slider__image">
                                         <p class="slider__name">Aさん</p>
                                         <div class="slider__box">
-                                            <p class="slider__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                                            <p class="slider__text">
+                                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="swiper-slide slider__item">
                                         <img src="/assets/image/swiper_02.png" alt="" class="slider__image">
                                         <p class="slider__name">Bさん</p>
                                         <div class="slider__box">
-                                            <p class="slider__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                                            <p class="slider__text">
+                                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="swiper-slide slider__item">
                                         <img src="/assets/image/swiper_03.png" alt="" class="slider__image">
                                         <p class="slider__name">Cさん</p>
                                         <div class="slider__box">
-                                            <p class="slider__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                                            <p class="slider__text">
+                                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="swiper-slide slider__item">
                                         <img src="/assets/image/swiper_04.png" alt="" class="slider__image">
                                         <p class="slider__name">Dさん</p>
                                         <div class="slider__box">
-                                            <p class="slider__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                                            <p class="slider__text">
+                                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="swiper-slide slider__item">
                                         <img src="/assets/image/swiper_05.png" alt="" class="slider__image">
                                         <p class="slider__name">Eさん</p>
                                         <div class="slider__box">
-                                            <p class="slider__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                                            <p class="slider__text">
+                                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="swiper-slide slider__item">
                                         <img src="/assets/image/swiper_06.png" alt="" class="slider__image">
                                         <p class="slider__name">Fさん</p>
                                         <div class="slider__box">
-                                            <p class="slider__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                                            <p class="slider__text">
+                                                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -132,106 +151,103 @@
                     </div>
                 </div>
             </section>
-            <section class="section section--faq">
-                <div class="container container--faq">
-                    <h4 class="title title--faq">
+            <!-- /section .voices-->
+            <!-- section faq-->
+            <section class="qanda">
+                <div class="qanda__container">
+                    <h2 class="title title--qanda">
                         <span class="title__main">Q&A</span>
                         <span class="title__sub">よくあるご質問</span>
-                    </h4>
+                    </h2>
                     <div class="faq__wrapper">
                         <dl class="faq">
                             <dt>
-                                <button id="accordion1-toggle" class="faq__question"
-                                    aria-controls="accordion1-panel"
+                                <button id="accordion1-toggle" class="faq__question" aria-controls="accordion1-panel"
                                     aria-expanded="false">
                                     <span class="faq__q-icon">Q</span>
                                     <span class="faq__q-text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
                                     <span class="faq__action"><span class="visually-hidden">回答パネルを開く</span></span>
                                 </button>
                             </dt>
-                            <dd id="accordion1-panel" class="faq__panel"
-                                aria-hidden="true"
+                            <dd id="accordion1-panel" class="faq__panel" aria-hidden="true"
                                 aria-labelledby="accordion1-toggle">
                                 <div class="faq__answer">
                                     <span class="faq__a-icon">A</span>
                                     <div class="faq__a-text">
-                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                        </p>
                                     </div>
                                 </div>
                             </dd>
                             <dt>
-                                <button id="accordion2-toggle" class="faq__question"
-                                    aria-controls="accordion2-panel"
+                                <button id="accordion2-toggle" class="faq__question" aria-controls="accordion2-panel"
                                     aria-expanded="false">
                                     <span class="faq__q-icon">Q</span>
                                     <span class="faq__q-text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
                                     <span class="faq__action"><span class="visually-hidden">回答パネルを開く</span></span>
                                 </button>
                             </dt>
-                            <dd id="accordion2-panel" class="faq__panel"
-                                aria-hidden="true"
+                            <dd id="accordion2-panel" class="faq__panel" aria-hidden="true"
                                 aria-labelledby="accordion2-toggle">
                                 <div class="faq__answer">
                                     <span class="faq__a-icon">A</span>
                                     <div class="faq__a-text">
-                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                        </p>
                                     </div>
                                 </div>
                             </dd>
                             <dt>
-                                <button id="accordion3-toggle" class="faq__question"
-                                    aria-controls="accordion3-panel"
+                                <button id="accordion3-toggle" class="faq__question" aria-controls="accordion3-panel"
                                     aria-expanded="false">
                                     <span class="faq__q-icon">Q</span>
                                     <span class="faq__q-text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
                                     <span class="faq__action"><span class="visually-hidden">回答パネルを開く</span></span>
                                 </button>
                             </dt>
-                            <dd id="accordion3-panel" class="faq__panel"
-                                aria-hidden="true"
+                            <dd id="accordion3-panel" class="faq__panel" aria-hidden="true"
                                 aria-labelledby="accordion3-toggle">
                                 <div class="faq__answer">
                                     <span class="faq__a-icon">A</span>
                                     <div class="faq__a-text">
-                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                        </p>
                                     </div>
                                 </div>
                             </dd>
                             <dt>
-                                <button id="accordion4-toggle" class="faq__question"
-                                    aria-controls="accordion4-panel"
+                                <button id="accordion4-toggle" class="faq__question" aria-controls="accordion4-panel"
                                     aria-expanded="false">
                                     <span class="faq__q-icon">Q</span>
                                     <span class="faq__q-text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
                                     <span class="faq__action"><span class="visually-hidden">回答パネルを開く</span></span>
                                 </button>
                             </dt>
-                            <dd id="accordion4-panel" class="faq__panel"
-                                aria-hidden="true"
+                            <dd id="accordion4-panel" class="faq__panel" aria-hidden="true"
                                 aria-labelledby="accordion4-toggle">
                                 <div class="faq__answer">
                                     <span class="faq__a-icon">A</span>
                                     <div class="faq__a-text">
-                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                        </p>
                                     </div>
                                 </div>
                             </dd>
                             <dt>
-                                <button id="accordion5-toggle" class="faq__question"
-                                    aria-controls="accordion5-panel"
+                                <button id="accordion5-toggle" class="faq__question" aria-controls="accordion5-panel"
                                     aria-expanded="false">
                                     <span class="faq__q-icon">Q</span>
                                     <span class="faq__q-text">テキストが入ります。テキストが入ります。テキストが入ります。</span>
                                     <span class="faq__action"><span class="visually-hidden">回答パネルを開く</span></span>
                                 </button>
                             </dt>
-                            <dd id="accordion5-panel" class="faq__panel"
-                                aria-hidden="true"
+                            <dd id="accordion5-panel" class="faq__panel" aria-hidden="true"
                                 aria-labelledby="accordion5-toggle">
                                 <div class="faq__answer">
                                     <span class="faq__a-icon">A</span>
                                     <div class="faq__a-text">
-                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                                        <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+                                        </p>
                                     </div>
                                 </div>
                             </dd>
@@ -239,33 +255,41 @@
                     </div>
                 </div>
             </section>
+            <!-- /section .faq-->
+            <!-- cta -->
             <div class="cta cta--fix">
-                <div class="container">
-                    <div class="cta__container">
-                        <div class="cta__text-wrapper">
-                            <p class="cta__text">
-                                キラメキクリーム
-                            </p>
-                            <p class="cta__text cta__text--small">税込<span class="cta__space"></span>4,000円</p>
-                        </div>
-                        <div class="cta__button-wrapper">
-                            <a href="#" class="cta__button button">オンラインショップへ</a>
-                            <form action="/cart/" method="post">
-                                <button type="submit" class="cta__button button button--attention">購入する</button>
-                            </form>
-                        </div>
+                <!-- <div class="container"> -->
+                <div class="cta__container">
+                    <div class="cta__text-wrapper">
+                        <p class="cta__text">
+                            キラメキクリーム
+                        </p>
+                        <p class="cta__text cta__text--small">税込<span class="cta__space"></span>4,000円</p>
+                    </div>
+                    <div class="cta__button-wrapper">
+                        <a href="#" class="cta__button button">オンラインショップへ</a>
+                        <form action="/cart/" method="post">
+                            <button type="submit" class="cta__button button button--attention">購入する</button>
+                        </form>
                     </div>
                 </div>
+                <!-- </div> -->
             </div>
+            <!-- /.cta -->
+
         </main>
-        <div class="pagetop__container js-pagetop">
-            <p class="pagetop js-smooth-scroll">
-                <a href="#">
+
+        <!-- pagetop -->
+        <div class="pagetop">
+            <div class="pagetop__container">
+                <a href="#" class="pagetop__button js-pagetop">
                     <span class="visually-hidden">ページの先頭へ戻る
                     </span>
                 </a>
-            </p>
+            </div>
         </div>
+        <!-- /.pagetop -->
+
         <footer class="footer js-footer">
             <div class="footer__container">
                 <div class="footer__logo">
