@@ -89,20 +89,12 @@ $breakpoints: (
 
 
 
-//-----------------------------------------------------
-// base
-//-----------------------------------------------------
+/* ===========================================
+ * base
+ * ======================================== */
 html {
     scroll-behavior: smooth;
-    // scroll-padding-top: vw(80);
-
-    // @include mq {
-    //     scroll-padding-top: vwt(100);
-    // }
-
-    // @include mq(lg) {
-    //     scroll-padding-top: px2Rem(100);
-    // }
+    overflow-x: hidden;
 }
 
 body {
@@ -110,7 +102,6 @@ body {
     font-family: $font-family;
     line-height: 1.75;
     font-size: vw(14);
-    // overflow-x: hidden;
 
     @include mq {
         font-size: vwt(16);
@@ -125,7 +116,6 @@ a {
     text-decoration: none;
     transition: color 0.3s;
 
-    // &:focus,
     &:hover {
         opacity: 0.6;
     }
@@ -135,12 +125,4 @@ img {
     display: block;
     width: 100%;
     height: auto;
-}
-
-.sp-block {
-    display: block;
-
-    @include mq {
-        display: none;
-    }
 }

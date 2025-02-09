@@ -48,13 +48,13 @@ $(function () {
         if (!expanded) {
             $self.attr({
                 'aria-expanded': true,
-                'aria-label': '回答パネルを閉じる' // 開いた状態のラベル
+                'aria-label': '回答パネルを閉じる'
             });
             $target.attr('aria-hidden', false).slideDown();
         } else {
             $self.attr({
                 'aria-expanded': false,
-                'aria-label': '回答パネルを開く' // 閉じた状態のラベル
+                'aria-label': '回答パネルを開く'
             });
             $target.attr('aria-hidden', true).slideUp();
         }
