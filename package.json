@@ -1,7 +1,0 @@
-{
-  "scripts":{"watch-server":"node server.js"},
-  "dependencies":{"fs":"^0.0.1-security","path":"^0.12.7"},
-  "devDependencies": {
-    "browser-sync": "^2.27.7"
-  }
-}
