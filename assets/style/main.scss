@@ -44,11 +44,17 @@
     }
 
     &__logo {
-        margin-inline: auto;
+
         width: vw(143);
+        padding-left: vw(2);
+        margin: vw(3) auto 0;
 
         @include mq {
             width: vwt(166);
+            margin: 0 auto;
+
+            padding-left: 0;
+
         }
 
         @include mq(lg) {
@@ -119,7 +125,7 @@
         @include mq {
             width: vwt(1200);
             margin: 0 auto;
-            padding: vwt(39) vwt(32);
+            padding: vwt(40) vwt(32) vwt(40) vwt(34);
 
             display: flex;
             align-items: center;
@@ -129,22 +135,23 @@
         @include mq(lg) {
             width: px2Rem(1200);
             margin: 0 auto;
-            padding: px2Rem(39) px2Rem(32);
+            padding: px2Rem(40) px2Rem(32) px2Rem(40) px2Rem(34);
+
 
         }
     }
 
     &__logo {
-        width: vw(166);
+        width: vw(164);
         margin: vw(7) auto vw(29);
 
         @include mq {
-            width: vwt(190);
+            width: vwt(186);
             margin: 0;
         }
 
         @include mq(lg) {
-            width: px2Rem(190);
+            width: px2Rem(186);
         }
     }
 
@@ -156,10 +163,12 @@
             font-size: vwt(12);
             letter-spacing: .09em;
             margin-left: 0;
+            margin-top: vwt(3);
         }
 
         @include mq(lg) {
             font-size: px2Rem(12);
+            margin-top: px2Rem(3);
 
 
         }
@@ -177,13 +186,13 @@
     @include mq {
         width: vwt(344);
         font-size: vwt(14);
-        margin: 0 0 0 vwt(46);
+        margin: 0 0 0 vwt(50);
     }
 
     @include mq(lg) {
         width: px2Rem(344);
         font-size: px2Rem(14);
-        margin: 0 0 0 px2Rem(46);
+        margin: 0 0 0 px2Rem(50);
     }
 
 }
@@ -195,7 +204,7 @@
     background: url(/assets/image/mainVisual_sp.jpg) center center / cover no-repeat;
     width: 100%;
     height: vw(450);
-    margin-bottom: vw(107);
+    margin-bottom: vw(157);
 
     @include mq {
         background: url(/assets/image/mainVIsual_pc.jpg) center center / cover no-repeat;
@@ -267,6 +276,7 @@
         @include l_spacing(300);
         margin-top: vw(7);
         display: block;
+        font-family: $font-family;
 
         @include mq {
             margin-top: vwt(10);
@@ -295,11 +305,14 @@
     @include mq {
         margin-top: vwt(80);
         margin-bottom: vwt(33);
+        padding-left: vwt(2);
     }
 
     @include mq(lg) {
         margin-top: px2Rem(80);
         margin-bottom: px2Rem(33);
+        padding-left: px2Rem(2);
+
     }
 
     &__main {
@@ -307,7 +320,7 @@
         font-size: vw(30);
         font-weight: bold;
         font-family: "EB Garamond", serif;
-        line-height: 1.3;
+        line-height: 1.27;
         @include l_spacing(50);
 
         @include mq {
@@ -339,12 +352,18 @@
     }
 
     &--qanda {
+        margin-bottom: vw(33);
+
         @include mq {
             margin-top: vwt(4);
+            margin-bottom: vwt(34);
+
         }
 
         @include mq(lg) {
             margin-top: px2Rem(4);
+            margin-bottom: px2Rem(34);
+
         }
     }
 }
@@ -395,19 +414,23 @@
 }
 
 .pagetop {
+
     &__container {
         // position: relative;
         display: flex;
         // margin: 0 vw(16);
         justify-content: flex-end;
-        // padding-right: vw(16);
+        padding-right: vw(16);
+        margin-top: vw(9);
         position: sticky;
+
         // bottom: 10px;
         // left: auto;
-
         @include mq {
             max-width: 1200px;
             margin: 0 auto;
+            padding-right: 0;
+
         }
 
 
@@ -468,7 +491,7 @@
 
     &__container {
         padding: vw(50) vw(16);
-        margin-inline: auto;
+        margin: vw(50) auto;
 
         @include mq {
             max-width: vwt($pc-content-width);
@@ -490,14 +513,14 @@
             max-width: vwt(430);
             margin-left: auto;
             margin-right: vwt(70);
-            padding: vwt(124) 0;
+            padding: vwt(124) 0 vwt(120);
 
         }
 
         @include mq(lg) {
             max-width: px2Rem(430);
             margin-right: px2Rem(70);
-            padding: px2Rem(124) 0;
+            padding: px2Rem(124) 0 px2Rem(120);
         }
     }
 
@@ -505,33 +528,37 @@
         font-size: vw(30);
         font-family: "EB Garamond", serif;
         font-weight: bold;
-        margin-bottom: vw(15);
+        margin-bottom: vw(16);
         line-height: 1.2;
         text-align: center;
 
         @include mq {
             font-size: vwt(38);
-            margin-bottom: 0;
+            margin-bottom: vwt(20);
+
             @include lineheight(38, 54);
             text-align: left;
         }
 
         @include mq(lg) {
             font-size: px2Rem(38);
+            margin-bottom: px2Rem(20);
+
         }
 
         &--sub {
             font-size: vw(24);
-            font-family: "Noto Serif JP", serif;
+            font-family: $font-family;
             font-weight: 600;
             display: block;
+            margin-top: vw(13);
 
-            margin-bottom: vw(15);
+            // margin-bottom: vw(15);
             text-align: center;
 
             @include mq {
                 font-size: vwt(24);
-                margin-bottom: vwt(19);
+                // margin-bottom: vwt(19);
                 margin-top: vwt(6);
                 text-align: left;
 
@@ -539,7 +566,7 @@
 
             @include mq(lg) {
                 font-size: px2Rem(24);
-                margin-bottom: px2Rem(19);
+                // margin-bottom: px2Rem(19);
                 margin-top: px2Rem(6);
 
             }
@@ -562,26 +589,26 @@
 
 .voices {
     &__container {
-        padding: vw(50) vw(16);
+        padding: 0 vw(16) vw(51);
         margin-inline: auto;
 
         @include mq {
             max-width: vwt($pc-content-width);
             padding: 0 vwt(22);
-            margin: vwt(48) auto;
+            margin: vwt(83) auto vwt(80);
         }
 
         @include mq(lg) {
             max-width: px2Rem($pc-content-width);
             padding: 0 px2Rem(22);
-            margin: px2Rem(48) auto;
+            margin: px2Rem(83) auto px2Rem(80);
         }
     }
 }
 
 .cta {
     &--fix {
-        margin-top: vw(10);
+        margin-top: vw(50);
 
         @include mq {
             margin-top: 0;
@@ -590,8 +617,9 @@
 
     &__container {
         background: $color-pale;
-        padding: vw(18) vw(29) vw(32);
         margin-inline: auto;
+        padding: vw(18) vw(29) vw(34);
+        max-width: vw(358);
 
         @include mq {
             display: flex;
@@ -606,6 +634,19 @@
             max-width: px2Rem(1000);
             padding: px2Rem(43) px2Rem(48);
             margin: px2Rem(48) auto;
+        }
+
+        &--fix {
+            @include mq {
+                padding: vwt(44) vwt(48) vwt(43) vwt(48);
+                margin-bottom: vwt(7);
+            }
+
+            @include mq(lg) {
+                padding: px2Rem(44) px2Rem(48) px2Rem(43) px2Rem(48);
+                margin-bottom: px2Rem(7);
+
+            }
         }
     }
 
@@ -649,16 +690,16 @@
         margin-left: vw(5);
 
         @include mq {
-            margin-left: vwt(7);
+            margin-left: vwt(6);
         }
 
         @include mq(lg) {
-            margin-left: px2Rem(7);
+            margin-left: px2Rem(6);
         }
     }
 
     &__button {
-        margin-bottom: vw(21);
+        margin-bottom: vw(20);
 
         @include mq {
             margin-right: vwt(32);
@@ -684,7 +725,7 @@
     }
 
     &__button-wrapper {
-        margin: vw(16) auto 0;
+        margin: vw(17) auto 0;
 
         @include mq {
 
@@ -701,11 +742,11 @@
 
     &__wrapper {
         @include mq {
-            margin-bottom: vwt(80);
+            margin: vwt(35) auto 0;
         }
 
         @include mq(lg) {
-            margin-bottom: px2Rem(80);
+            margin: px2Rem(35) auto 0;
         }
     }
 
@@ -719,17 +760,17 @@
 
     &__item {
         background: $color-background;
-        padding: vw(15) vw(15) vw(22);
+        padding: vw(15) vw(15) vw(24);
 
         @include mq {
             width: vwt(300);
-            padding: vwt(23) vwt(16) vwt(38);
+            padding: vwt(23) vwt(16) vwt(37);
 
         }
 
         @include mq(lg) {
             width: px2Rem(300);
-            padding: px2Rem(23) px2Rem(16) px2Rem(38);
+            padding: px2Rem(23) px2Rem(16) px2Rem(37);
 
 
         }
@@ -743,12 +784,12 @@
 
         @include mq {
             width: vwt(100);
-            margin: vwt(19) auto vwt(5);
+            margin: vwt(17) auto vwt(5);
         }
 
         @include mq(lg) {
             width: px2Rem(100);
-            margin: px2Rem(19) auto px2Rem(5);
+            margin: px2Rem(17) auto px2Rem(5);
 
         }
     }
@@ -775,11 +816,13 @@
     }
 
     &__button {
-
+        top: 52%;
         width: vw(32);
         height: vw(32);
 
         @include mq {
+            top: 49.3%;
+
             width: vwt(48);
             height: vwt(48);
         }
@@ -843,15 +886,15 @@
         flex-wrap: wrap;
         gap: 1.2rem 0.8rem;
         justify-content: center;
-        margin-top: vw(18);
+        margin-top: vw(17);
         text-align: center;
 
         @include mq {
-            margin-top: vwt(23);
+            margin-top: vwt(24);
         }
 
         @include mq(lg) {
-            margin-top: px2Rem(23);
+            margin-top: px2Rem(24);
 
 
         }
@@ -892,7 +935,7 @@
     }
 
     &__container {
-        padding: vw(33) vw(16);
+        padding: vw(32) vw(16);
         margin-inline: auto;
 
         @include mq {
@@ -933,24 +976,41 @@
         display: flex;
         color: $color-second;
         align-items: flex-start;
-        padding: vw(16) vw(16) vw(14);
+        padding: vw(16) vw(16) vw(12);
         font-weight: bold;
         text-align: left;
         cursor: pointer;
         background: $color-contrast;
 
         &[aria-expanded=true] .faq__action::before {
+            top: 60%;
             transform: translate(-50%, -50%) rotate(180deg);
+            // transform: translateX(-50%) rotate(0deg);
+        }
+
+        &[aria-expanded=false] {
+            padding-bottom: vw(17);
+
+            @include mq {
+                // padding: vwt(24);
+                padding: vwt(25) vwt(24) vwt(22) vwt(24);
+            }
+
+            @include mq(lg) {
+                // padding: px2Rem(24);
+                padding: px2Rem(25) px2Rem(24) px2Rem(22) px2Rem(24);
+
+            }
         }
 
         @include mq {
             padding: vwt(24);
             align-items: center;
-
+            padding: vwt(25) vwt(24) vwt(20) vwt(24);
         }
 
         @include mq(lg) {
-            padding: px2Rem(24);
+            padding: px2Rem(25) px2Rem(24) px2Rem(20) px2Rem(24);
 
 
         }
@@ -960,12 +1020,12 @@
         margin-top: vw(20);
 
         @include mq {
-            margin-top: vwt(23);
+            margin-top: vwt(24);
 
         }
 
         @include mq(lg) {
-            margin-top: px2Rem(23);
+            margin-top: px2Rem(24);
 
         }
     }
@@ -976,6 +1036,7 @@
         vertical-align: middle;
         font-size: vw(16);
         margin-top: vw(5);
+        font-family: "EB Garamond", serif;
 
         @include mq {
             font-size: vwt(18);
@@ -996,13 +1057,13 @@
 
         @include mq {
             font-size: vwt(15);
-            margin-left: vwt(20);
+            margin-left: vwt(16);
             line-height: 1.6;
         }
 
         @include mq(lg) {
             font-size: px2Rem(15);
-            margin-left: px2Rem(20);
+            margin-left: px2Rem(16);
 
         }
     }
@@ -1029,6 +1090,7 @@
         line-height: 1;
         vertical-align: middle;
         margin-top: vw(5);
+        font-family: "EB Garamond", serif;
 
         @include mq {
             font-size: vwt(18);
@@ -1044,19 +1106,19 @@
     }
 
     &__a-text {
-        margin-left: vw(14);
+        margin-left: vw(15);
         font-size: vw(15);
 
         @include mq {
             font-size: vwt(15);
-            margin-left: vwt(20);
+            margin-left: vwt(16);
 
 
         }
 
         @include mq(lg) {
             font-size: px2Rem(15);
-            margin-left: px2Rem(20);
+            margin-left: px2Rem(16);
 
 
         }
@@ -1101,11 +1163,14 @@
             width: vw(10);
             height: vw(10);
             transition: all .3s;
-            top: 50%;
+            top: 43%;
             left: 50%;
-            transform: translate(-50%, -50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
 
             @include mq {
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(0deg);
+
                 width: vwt(12);
                 height: vwt(12);
             }

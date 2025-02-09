@@ -42,14 +42,20 @@ $(function () {
     //-----------------------------------------------------
     $('[aria-controls^="accordion"]').stop().on('click', function (e) {
         const $self = $(e.currentTarget);
-        const expanded = $self.attr('aria-expanded');
+        const expanded = $self.attr('aria-expanded') === 'true';
         const $target = $('#' + $self.attr('aria-controls'));
 
-        if (expanded === 'false') {
-            $self.attr('aria-expanded', true);
+        if (!expanded) {
+            $self.attr({
+                'aria-expanded': true,
+                'aria-label': '回答パネルを閉じる' // 開いた状態のラベル
+            });
             $target.attr('aria-hidden', false).slideDown();
         } else {
-            $self.attr('aria-expanded', false);
+            $self.attr({
+                'aria-expanded': false,
+                'aria-label': '回答パネルを開く' // 閉じた状態のラベル
+            });
             $target.attr('aria-hidden', true).slideUp();
         }
     });
