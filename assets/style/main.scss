@@ -387,8 +387,10 @@
         background: url(/assets/image/icon_to_top.svg) center center / contain no-repeat;
 
         &:hover {
-            background: url(/assets/image/icon_to_top_hover.svg) center center / contain no-repeat;
-            opacity: 1;
+            @media (hover: hover) and (pointer: fine) {
+                background: url(/assets/image/icon_to_top_hover.svg) center center / contain no-repeat;
+                opacity: 1;
+            }
         }
 
         @include mq {
@@ -446,7 +448,6 @@
             margin-left: auto;
             margin-right: vwt(69);
             padding: vwt(124) 0 vwt(120);
-
         }
 
         @include mq(lg) {
@@ -488,7 +489,6 @@
                 font-size: vwt(24);
                 margin-top: vwt(6);
                 text-align: left;
-
             }
 
             @include mq(lg) {
@@ -584,12 +584,10 @@
             font-size: vwt(24);
             @include l_spacing(100);
             line-height: 1.2;
-
         }
 
         @include mq(lg) {
             font-size: px2Rem(24);
-
         }
 
         &--small {
@@ -661,6 +659,14 @@
     width: vw(280);
     margin-inline: auto;
 
+    @include mq {
+        width: vwt(980);
+    }
+
+    @include mq(lg) {
+        width: px2Rem(980);
+    }
+
     &__wrapper {
         @include mq {
             margin: vwt(35) auto 0;
@@ -669,14 +675,6 @@
         @include mq(lg) {
             margin: px2Rem(35) auto 0;
         }
-    }
-
-    @include mq {
-        width: vwt(980);
-    }
-
-    @include mq(lg) {
-        width: px2Rem(980);
     }
 
     &__item {
@@ -853,6 +851,14 @@
 }
 
 .faq {
+    @include mq {
+        width: vwt(600);
+    }
+
+    @include mq(lg) {
+        width: px2Rem(600);
+    }
+
     &__wrapper {
         @include mq {
             width: vwt(600);
@@ -862,14 +868,6 @@
         @include mq(lg) {
             width: px2Rem(600);
         }
-    }
-
-    @include mq {
-        width: vwt(600);
-    }
-
-    @include mq(lg) {
-        width: px2Rem(600);
     }
 
     &__question {
@@ -957,7 +955,6 @@
         @include mq(lg) {
             font-size: px2Rem(15);
             margin-left: px2Rem(16);
-
         }
     }
 
@@ -971,7 +968,6 @@
 
         @include mq(lg) {
             padding: 0 px2Rem(26) px2Rem(20) px2Rem(24);
-
         }
     }
 
@@ -1005,15 +1001,11 @@
         @include mq {
             font-size: vwt(15);
             margin-left: vwt(16);
-
-
         }
 
         @include mq(lg) {
             font-size: px2Rem(15);
             margin-left: px2Rem(16);
-
-
         }
 
         p {

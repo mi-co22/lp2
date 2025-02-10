@@ -117,8 +117,11 @@ a {
     transition: color 0.3s;
 
     &:hover {
-        opacity: 0.6;
+        @media (hover: hover) and (pointer: fine) {
+            opacity: 0.6;
+        }
     }
+
 }
 
 img {
