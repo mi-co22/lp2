@@ -453,6 +453,7 @@ img {
 }
 
 .pagetop {
+    position: -webkit-sticky;
     position: sticky;
     padding-right: 4.1025641026vw;
     bottom: 4.1025641026vw;
@@ -1087,59 +1088,59 @@ img {
     display: flex;
     color: #444;
     align-items: flex-start;
-    padding: 4.1025641026vw 4.1025641026vw 3.0769230769vw;
+    padding: 4.1025641026vw 4.1025641026vw 4.358974359vw;
     font-weight: bold;
     text-align: left;
     cursor: pointer;
     background: #fff;
 }
 
-.faq__question[aria-expanded=true] .faq__action::before {
-    top: 60%;
-    transform: translate(-50%, -50%) rotate(180deg);
-}
-
-.faq__question[aria-expanded=false] {
-    padding-bottom: 4.358974359vw;
-}
-
 @media screen and (min-width: 768px) {
-    .faq__question[aria-expanded=false] {
+    .faq__question {
+        align-items: center;
         padding: 2.0833333333vw 2vw 1.8333333333vw 2vw;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .faq__question[aria-expanded=false] {
+    .faq__question {
         padding: 1.5625rem 1.5rem 1.375rem 1.5rem;
     }
 }
 
+.faq__question--expanded {
+    padding: 4.1025641026vw 4.1025641026vw 3.0769230769vw;
+}
+
 @media screen and (min-width: 768px) {
-    .faq__question {
-        align-items: center;
+    .faq__question--expanded {
         padding: 2.0833333333vw 2vw 1.6666666667vw 2vw;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .faq__question {
+    .faq__question--expanded {
         padding: 1.5625rem 1.5rem 1.25rem 1.5rem;
     }
 }
 
-.faq dt:not(:first-child) {
+.faq__question--expanded .faq__action::before {
+    top: 60%;
+    transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.faq__term:not(:first-child) {
     margin-top: 5.1282051282vw;
 }
 
 @media screen and (min-width: 768px) {
-    .faq dt:not(:first-child) {
+    .faq__term:not(:first-child) {
         margin-top: 2vw;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .faq dt:not(:first-child) {
+    .faq__term:not(:first-child) {
         margin-top: 1.5rem;
     }
 }
@@ -1316,3 +1317,5 @@ img {
         height: 0.75rem;
     }
 }
+
+/*# sourceMappingURL=main.css.map */

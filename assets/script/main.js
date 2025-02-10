@@ -48,14 +48,14 @@ $(function () {
         if (!expanded) {
             $self.attr({
                 'aria-expanded': true,
-                'aria-label': '回答パネルを閉じる'
-            });
+                'aria-label': '回答パネルを閉じる',
+            }).addClass('faq__question--expanded');
             $target.attr('aria-hidden', false).slideDown();
         } else {
             $self.attr({
                 'aria-expanded': false,
                 'aria-label': '回答パネルを開く'
-            });
+            }).removeClass('faq__question--expanded');
             $target.attr('aria-hidden', true).slideUp();
         }
     });
